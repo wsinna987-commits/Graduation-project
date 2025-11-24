@@ -1,0 +1,101 @@
+  /* html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .app-container {
+               border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        iframe {
+               border: 1px solid darkblue;
+            width: 100%;
+            border: none;
+        }
+        .top-frame {
+               border: 1px solid darkgoldenrod;
+            height: 13%;
+        }
+        .middle-container {
+               border: 1px solid red;
+            flex: 1;
+            display: flex;
+        }
+        .left-frame {
+               border: 1px solid orange;
+            width: 12%;
+            height:100%
+        }
+        .right-frame {
+               border: 1px solid blue;
+            width: 90%;
+            height: 100%;
+        } */
+
+        /* 主容器样式：占满整个屏幕 */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        /* 顶部iframe：导航栏 */
+        .top-frame {
+            height: 60px; /* 顶部高度，可调整 */
+            border: none;
+            width: 100%;
+            background-color: #333;
+        }
+        
+        /* 中间容器：左侧菜单 + 右侧内容 */
+        .middle-container {
+            display: flex;
+            flex: 1; /* 占满剩余高度 */
+            overflow: hidden;
+        }
+        
+        /* 左侧iframe：菜单 */
+        .left-frame {
+            width: 220px; /* 左侧菜单宽度，可调整 */
+            border: none;
+            border-right: 1px solid #ddd;
+            background-color: #f5f5f5;
+        }
+        
+        /* 右侧iframe：内容区（默认加载right.php） */
+        .right-frame {
+            flex: 1; /* 占满剩余宽度 */
+            border: none;
+            background-color: white;
+        }
+        
+        /* 底部iframe：版权信息 */
+        .bottom-frame {
+            height: 40px; /* 底部高度，可调整 */
+            border: none;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        /* 加载指示器：页面切换时显示 */
+        #loading-indicator {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 9999;
+        }

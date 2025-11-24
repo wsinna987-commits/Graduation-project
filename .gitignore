@@ -1,8 +1,5 @@
 
 
-# 忽略admin目录
-/class/
-/Manger/phpMyAdmin/
+# 忽略目录
+/phpMyAdmin/
 
-# 忽略特定文件
-/web/left.php
